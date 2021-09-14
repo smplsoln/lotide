@@ -9,11 +9,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-function head(arr) {
+const head = function(arr) {
   return (null === arr) ? null
     : (undefined === arr) ? undefined
       : arr[0];
-}
+};
 
 // TEST CODE
 assertEqual(head([5,6,7]), 5);

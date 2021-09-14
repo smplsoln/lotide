@@ -1,5 +1,5 @@
 const assertEqual = function(actualArr, expectedArr) {
-  const actual = (actualArr === undefined) ? undefined: (actualArr === null) ? null : actualArr.toString();
+  const actual = (actualArr === undefined) ? undefined : (actualArr === null) ? null : actualArr.toString();
   const expected = (expectedArr === undefined) ? undefined : (expectedArr === null) ? null : expectedArr.toString();
 
   let failEmoji = '🤬 🤬 🤬';
@@ -11,13 +11,13 @@ const assertEqual = function(actualArr, expectedArr) {
   }
 };
 
-function tail(arr) {
+const tail = function(arr) {
   return (null === arr) ? null
     : (undefined === arr) ? undefined
       : (0 === arr.length) ? []
         : (1 === arr.length) ? []
-        : arr.slice(1);
-}
+          : arr.slice(1);
+};
 
 // TEST CODE
 assertEqual(tail([5,6,7]), [6, 7]);
