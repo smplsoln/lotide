@@ -68,7 +68,7 @@ const without = function(source, itemsToRemove) {
         break;
       }
     }
-    if(!doRemove) {
+    if (!doRemove) {
       resultArr.push(srcItm);
     }
   }
