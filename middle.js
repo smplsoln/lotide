@@ -46,7 +46,7 @@ const assertEqual = function(actual, expected) {
 };
 
 const middle = function(arr) {
-  const mid = [];
+  const midArr = [];
 
   if (!Array.isArray(arr)) {
     console.log('Wrong argument! Not an array: ' + arr);
@@ -54,18 +54,20 @@ const middle = function(arr) {
   }
 
   if (arr.length < 3) {
-    return mid;
+    return midArr;
   }
 
-  let midIndex = Math.round(arr.length / 2);
-  let isEvenLength = (arr.length % 2 === 0) ? true : false;
+  let isArrLengthEven = (arr.length % 2 === 0) ? true : false;
 
-  mid.push(arr[midIndex - 1]);
+  let mid = (isArrLengthEven ? (arr.length / 2)
+                                : (arr.length + 1) / 2);
 
-  if (isEvenLength) {
-    mid.push(arr[midIndex]);
+  midArr.push(arr[mid - 1]);
+
+  if (isArrLengthEven) {
+    midArr.push(arr[mid]);
   }
-  return mid;
+  return midArr;
 };
 
 assertArraysEqual(middle([6, 7, 8, 9, 1, 24, 3, 4, 5, 10, 11]), [24]);
