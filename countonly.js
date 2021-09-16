@@ -34,19 +34,17 @@ const countOnly = function(allItems, itemsToCount) {
 
     // item required so add/increment in itemsPresent result
     if (itemsPresent[item] !== undefined) {
-      console.log("Increment: " + item);
+      // console.log("Increment: " + item);
       itemsPresent[item] += 1;
     } else {
-      console.log("Add entry for: " + item);
+      // console.log("Add entry for: " + item);
       itemsPresent[item] = 1;
     }
   }
 
   // after all present keys are done return the itemsPresent array
-  console.log("ItemsPresent: " + itemsPresent.toString());
   return itemsPresent;
-
-}
+};
 
 
 // tests
