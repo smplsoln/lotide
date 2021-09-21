@@ -1,15 +1,4 @@
 
-const assertEqual = function(actual, expected) {
-
-  let failEmoji = '🤬 🤬 🤬';
-  let passEmoji = '💚 💚 💚';
-  if (actual === expected) {
-    console.log(`Assertion Passed: ${passEmoji} [${actual}] === [${expected}]`);
-  } else {
-    console.log(`Assertion Failed: ${failEmoji} [${actual}] !== [${expected}]`);
-  }
-};
-
 /**
  * str: an array of strings that we need to look through
  * // lettersToCount: an object specifying what to count
@@ -45,10 +34,4 @@ const countLetters = function(str) {
   return lettersPresent;
 };
 
-// tests
-const lettersCounts = countLetters("lighthouse in the house");
-
-assertEqual(lettersCounts["l"], 1);
-assertEqual(lettersCounts["z"], undefined);
-assertEqual(lettersCounts["h"], 4);
-assertEqual(lettersCounts[" "], undefined);
+module.exports = countLetters;
