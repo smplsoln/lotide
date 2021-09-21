@@ -1,8 +1,14 @@
 {
-  "name": "lotide",
+  "name": "@prashantarane/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A Javascript library providing helpful utilities.",
+  "exports": {
+    ".": {
+      "require": "./index.js"
+    },
+    "./": "./"
+  },
+  "main": "./index",
   "directories": {
     "test": "test"
   },
@@ -14,8 +20,8 @@
     "url": "git+https://github.com/smplsoln/lotide.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Prashant R <smplsoln@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/smplsoln/lotide/issues"
   },
