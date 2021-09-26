@@ -31,6 +31,7 @@ The following functions are currently implemented:
 * `middle(array)`: gives middle of given array
 * `map(arr, fn)`: applies the passed function fn to every item of the passed array arr and returns a new array containing the results
 * `findKey(obj, fn)`: applies the passed function fn to every item of the passed object's value of each property and returns the first key for which the function returns true of is truthy
+*  `takeUntil(arr, fn)`: returns the slice of the given array until the fn is truthy for an itm of the array
 * `countLetters(string)`: gives the counts of all the letters in the given string
 * `countOnly(arrayOfGivenStrings, arrayOfStringsToCount)`: gives the counts of the required strings in the given array of strings
 * `findKeyByValue(object, valueString)`: finds the key of a value in given object matching the given valueString
